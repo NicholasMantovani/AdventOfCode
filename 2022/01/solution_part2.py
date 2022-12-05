@@ -1,7 +1,7 @@
-class MaxElf():          # leave this empty
-    def __init__(self, max_calories, max_calories_elf):   # constructor function using self
-        self.max_calories = max_calories  # variable using self.
-        self.max_calories_elf = max_calories_elf  # variable using self
+class Elf():
+    def __init__(self, max_calories, max_calories_elf):
+        self.max_calories = max_calories
+        self.max_calories_elf = max_calories_elf
 
 
 file = open("input.txt")
@@ -18,7 +18,7 @@ for line in lines:
         calories_count += int(line.strip())
     else:
         calories_list.append(
-            MaxElf(max_calories=calories_count, max_calories_elf=max_calories_elf))
+            Elf(calories_count, max_calories_elf))
         calories_count = 0
         max_calories_elf += 1
 

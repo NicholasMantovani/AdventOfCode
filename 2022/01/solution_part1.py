@@ -4,6 +4,7 @@ lines = file.readlines()
 max_calories = 0
 calories_count = 0
 max_calories_elf = 0
+elf = 0
 
 for line in lines:
     if (line.strip()):
@@ -11,8 +12,9 @@ for line in lines:
     else:
         if (max_calories < calories_count):
             max_calories = calories_count
+            max_calories_elf = elf
         calories_count = 0
-        max_calories_elf += 1
+        elf += 1
 
 """
 for veryfing the result
